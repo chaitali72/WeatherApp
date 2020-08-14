@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6168baa3db.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons-wind.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+    <link rel="stylesheet" href="../node_modules/weathericons/css/weather-icons.min.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <title>WeatherlyApp</title>
+</head>
+
+<body>
+    <div class="container">
+        <fieldset>
+            <form action="/" method="post">
+                <input name="city" type="text" class="ghost-input" placeholder="Find a Forecast" required />
+                <input id="submit" type="submit" class="ghost-button" value="Get Weather" />
+
+                <section class="weather">
+                    <div class="temp">
+
+                    </div>
+                </section>
+            </form>
+            <% if(weather !== null){ %>
+            <p><%= weather %></p>
+            <% } %> <% if(error !== null){ %>
+            <p><%= error %></p>
+            <% } %>
+        </fieldset>
+    </div>
+
+
+</body>
+
+</html>
